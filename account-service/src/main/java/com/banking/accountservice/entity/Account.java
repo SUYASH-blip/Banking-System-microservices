@@ -52,4 +52,7 @@ public class Account {
 
     @UpdateTimestamp
     private LocalDateTime updatedAt;
+
+
+
 }
