@@ -1,4 +1,35 @@
 package com.banking.accountservice.dto;
 
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Positive;
+import lombok.*;
+
+import java.math.BigDecimal;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Getter
+@Setter
 public class createAccountRequest {
+
+    @NotBlank(message = "Account holder name is required")
+    private String accountHolderName;
+
+    @NotBlank(message = "email is required")
+    @Email(message = "Invalid email format")
+    private String email;
+
+    @NotBlank(message = "PhoneNumber is required")
+    private String phone;
+
+    @NotNull(message = "Account type is required")
+    private String accountType;
+
+    @NotNull(message = "Initial deposit is required")
+    @Positive(message = "Initial deposit must be positive")
+    private BigDecimal initialDeposit;
+
 }
