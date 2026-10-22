@@ -153,7 +153,7 @@ public class AccountService {
      */
 
 
-    public void blockAccountNumber(String accountNumber) {
+    public void blockAccount(String accountNumber) {
         log.info("Blocking account: {}", accountNumber);
         Account account = accountRepository.findByAccountNumber(accountNumber)
                 .orElseThrow(() -> new RuntimeException("Account Not Found!"));
