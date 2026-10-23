@@ -3,11 +3,16 @@ package com.banking.transactionservice.DTO;
 import com.banking.transactionservice.entity.TransactionStatus;
 import com.banking.transactionservice.entity.TransactionType;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.CreationTimestamp;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-
+@AllArgsConstructor
+@Data
+@NoArgsConstructor
 public class TransactionResponse {
 
     private String id;
