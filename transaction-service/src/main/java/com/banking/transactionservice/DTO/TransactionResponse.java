@@ -1,0 +1,34 @@
+package com.banking.transactionservice.DTO;
+
+import com.banking.transactionservice.entity.TransactionStatus;
+import com.banking.transactionservice.entity.TransactionType;
+import jakarta.persistence.*;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+
+public class TransactionResponse {
+
+    private String id;
+
+    private String senderAccountNumber;
+
+    private String receiverAccountNumber;
+
+    private BigDecimal amount;
+
+    private TransactionType type;
+
+    private TransactionStatus status;
+
+    private String description;
+
+    private String failureReason;
+
+    private String referenceNumber;
+
+    private LocalDateTime createdAt;
+
+    private LocalDateTime completedAt;
+}
