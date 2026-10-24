@@ -1,4 +1,4 @@
-package com.banking.transactionservice.entity;
+package com.banking.transactionservice.model;
 
 /**
  * Transaction Lifecycle Flow
